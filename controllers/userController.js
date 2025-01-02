@@ -6,6 +6,8 @@ exports.createUser = async (req, res) => {
     const user = await prisma.user.create({
       data: req.body,
     });
+    console.log(req.body);
+
     res.status(201).json(user);
   } catch (error) {
     res.status(500).json({ error: 'Failed to create user' });

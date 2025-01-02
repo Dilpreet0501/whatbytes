@@ -21,7 +21,7 @@ model Project {
   id          String   @id @default(uuid())
   name        String
   description String
-  status      Status   @default(PLANNED)
+  status      Status   
   createdAt   DateTime @default(now())
   userId      String
   user        User     @relation(fields: [userId], references: [id])
